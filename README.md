@@ -1,0 +1,3 @@
+# Focus on Hawaii
+
+This project aims to investigate some economic parameters and soil organic matter in Oahu, Hawaii using simple analysis methods in R. The study will make use of maps to visualize the data and identify patterns and correlations. To accomplish this, I will utilize several R packages including tmap, sf, sp, rgdal and others to process, analyze, and display the data. These packages offer a range of functions for working with spatial data, including mapping, projection conversion, and data manipulation. By combining these tools, I hope to gain a comprehensive understanding of the relationship between economic parameters and soil organic matter in Oahu, Hawaii.
