@@ -69,7 +69,7 @@ tm_layout("Winkel-Tripel projection", inner.margins=c(0,0,.1,0), title.size=.8)
 ```
 
 
-State what aspect(s) are preserved with the projections you use. Comment on the visual differences and biases across the three maps.
+Stating what aspect are preserved with the projections used. Commenting on the visual differences and biases across the three maps.
 
 WGS84 projection: This is an equal-area projection, and it preserves area accurately but distorts shapes and angles.
 
@@ -80,7 +80,7 @@ Winkel-Tripel projection: This projection is an equal-area projection and it has
 
 ## Part 1.3
 
-The "World" data set contains a column labeled “HPI” that stands for Happy Planet Index. Information about this metric can be found here: http://happyplanetindex.org Make a four panel map that plots: HPI, life expectancy, footprint and inequality.
+The "World" data set contains a column labeled “HPI” that stands for Happy Planet Index. Information about this metric can be found here: http://happyplanetindex.org The code makes a four panel map that plots: HPI, life expectancy, footprint and inequality.
 
 ```{r}
 # plot 4 maps together
@@ -128,7 +128,7 @@ oahu_elev <- crop(spatial_4, oahu_sf)
 
 ## Part 2.1
 
-Make the altitude data for Oahu into a spatial object with geometry type points. Include R code used and output of the data set to show that it is in fact now a spatial object. Selecting a CRS.
+Making the altitude data for Oahu into a spatial object with geometry type points. Including R code used and output of the data set to show that it is in fact now a spatial object. Selecting a CRS.
 ```{r}
 # Convert the sf object to a points geometry type
 oahu_points <- st_as_sf(oahu_elev, geometry = "POINT",
@@ -141,7 +141,7 @@ oahu_points
 
 ## Part 2.2
 
-Using a basemap of your choosing, plot the altitude points onto a map of Oahu. Allow the points to change colors by altitude.
+Using a basemap of your choosing, plotting the altitude points onto a map of Oahu. Allow the points to change colors by altitude.
 
 ```{r}
 # # Split the geometry column of the points into longitude and latitude
@@ -166,7 +166,7 @@ ggplot() +
 
 ## Part 2.3
 
-Convert the spatial object into a raster, and plot the raster. Include R code and show that the object is now a raster.
+Converting the spatial object into a raster, and plot the raster. Including R code and show that the object is now a raster.
 
 ```{r}
 # create matrix
@@ -181,7 +181,7 @@ plot(oahu_rast, main = "Plot of altitude in Oahu")
 
 ## Part 2.4
 
-Download the data for organic matter at https://gis.ctahr.hawaii.edu/SoilAtlas#downloads. What soil orders of organic matters exist at altitudes of > 500 m? Make a map of the organic matter soil orders for altitudes > 500 m. Include R code.
+Downloading the data for organic matter at https://gis.ctahr.hawaii.edu/SoilAtlas#downloads. What soil orders of organic matters exist at altitudes of > 500 m? Making a map of the organic matter soil orders for altitudes > 500 m.
 
 ```{r}
 # Download shapefile zip : organic matter
@@ -264,7 +264,7 @@ mapview(World, zcol = c("HPI", "life_exp", "footprint", "inequality"),
 
 ## Part 3.2
 
-Using the R packages tmap or mapview, make the plot in Part 2.2 interactive.
+Using the R packages tmap or mapview, making the plot in Part 2.2 interactive.
 
 ```{r}
 # Plot the map using map view
