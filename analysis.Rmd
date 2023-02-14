@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-Using the 'World' data set available in the R package tmap.
+When one wants to explore and visualize global data, the "World" dataset available in the R package tmap can prove to be a valuable resource. This dataset contains information on the political boundaries and attributes of countries and regions around the world. With the help of this dataset, researchers and analysts can generate maps and visualizations that reveal patterns and relationships within global data. The World dataset has been widely used in various fields, including economics, political science, and environmental studies. Its broad scope and accessibility make it a useful tool for anyone interested in examining global trends and patterns.
 
 ```{r}
 # load the required libraries
