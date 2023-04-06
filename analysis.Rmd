@@ -20,7 +20,7 @@ library(tidyverse)
 ```
 
 
-## Part 1.1
+## Step 1.1
 
 Analyzing the type of spatial object that the ‘World’ data set is? What is the CRS?
 ```{r}
@@ -43,7 +43,7 @@ st_crs(World)
 ```
 The CRS of the World dataset is World Geodetic System 1984 EPSG:4326 
 
-## Part 1.2
+## Step 1.2
 
 Using the projection argument of `tm_shape()`, create maps of the World data set with two other projections.
 
@@ -78,7 +78,7 @@ Eckert IV projection: This is an equal-area projection that displays continents 
 Winkel-Tripel projection: This projection is an equal-area projection and it has reduced distortion of both shape and area. It has a low amount of distortion and generally shows accurate directions, but is not an exact representation of size or shape.
 
 
-## Part 1.3
+## Step 1.3
 
 The "World" data set contains a column labeled “HPI” that stands for Happy Planet Index. Information about this metric can be found here: http://happyplanetindex.org The code makes a four panel map that plots: HPI, life expectancy, footprint and inequality.
 
@@ -97,7 +97,7 @@ plot(World["inequality"])
 ```
 
 
-# Part 2
+# Step 2
 Altitude data for the USA can be obtained using the raster R package:
 
 ```{r}
@@ -126,7 +126,7 @@ oahu_sf <- st_read("Age-Friendly_City_Tract_Percent.shp")
 oahu_elev <- crop(spatial_4, oahu_sf)
 ```
 
-## Part 2.1
+## Step 2.1
 
 Making the altitude data for Oahu into a spatial object with geometry type points. Including R code used and output of the data set to show that it is in fact now a spatial object. Selecting a CRS.
 ```{r}
@@ -139,7 +139,7 @@ str(oahu_points)
 oahu_points
 ```
 
-## Part 2.2
+## Step 2.2
 
 Using a basemap of your choosing, plotting the altitude points onto a map of Oahu. Allow the points to change colors by altitude.
 
@@ -164,7 +164,7 @@ ggplot() +
        title = "Altitude points of Oahu")
 ```
 
-## Part 2.3
+## Step 2.3
 
 Converting the spatial object into a raster, and plot the raster. Including R code and show that the object is now a raster.
 
@@ -179,7 +179,7 @@ oahu_rast <- rasterFromXYZ(mat_rast)
 plot(oahu_rast, main = "Plot of altitude in Oahu")
 ```
 
-## Part 2.4
+## Step 2.4
 
 Downloading the data for organic matter at https://gis.ctahr.hawaii.edu/SoilAtlas#downloads. What soil orders of organic matters exist at altitudes of > 500 m? Making a map of the organic matter soil orders for altitudes > 500 m.
 
@@ -247,11 +247,11 @@ ggplot() +
 ```
 
 
-# Part 3
+# Step3
 
-## Part 3.1
+## Step 3.1
 
-Using the R packages tmap or mapview, make the plot in Part 1.3 interactive.
+Use tmap or mapview in R to create an interactive version of the plot in Step 1.3.
 
 ```{r}
 # load library
@@ -262,9 +262,9 @@ mapview(World, zcol = c("HPI", "life_exp", "footprint", "inequality"),
 
 ```
 
-## Part 3.2
+## Step 3.2
 
-Using the R packages tmap or mapview, making the plot in Part 2.2 interactive.
+Create an interactive version of the plot in Step 2.2 using either tmap or mapview R packages.
 
 ```{r}
 # Plot the map using map view
